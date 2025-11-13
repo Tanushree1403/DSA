@@ -16,19 +16,6 @@ class WordDictionary {
      * @param {string} word
      * @return {void}
      */
-    /*
-    Start at root.
-
-    For each character:
-
-        compute its child index.
-
-        create the child node if it doesn’t exist.
-
-        move curr down to that child.
-
-    After the last char, set word = true at the final node.
-     */
     addWord(word) {
         let curr = this.root;
 
@@ -53,19 +40,6 @@ class WordDictionary {
         return this.dfs(word,0,this.root);
     }
 
-    /*
-    Iterate from index j to end of word:
-
-    If the current pattern char is .:
-
-    This can match any single letter. So you try every non-null child and recursively continue from i+1. If any recursive call returns true, the whole search succeeds.
-
-    Otherwise (a concrete letter):
-
-    Follow the only allowed edge. If it doesn’t exist → false.
-
-    If you finish the loop (matched all characters), return whether the current node is the end of a word (curr.word). 
-    */
     dfs(word,j,root){
         let curr = root;
 
