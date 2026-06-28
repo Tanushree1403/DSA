@@ -43,3 +43,4 @@ class Solution {
 
     const solution = new Solution();
     solution.bfs(graph, 0);
+// time complexity: O(V+E)
